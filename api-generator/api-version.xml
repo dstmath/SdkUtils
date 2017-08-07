@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<api version="2">
+	<class name="cm/android/engine/interfaces/IAgent" since="1">
+		<extends name="java/lang/Object" />
+		<method name="getApplicationManager()Lcm/android/mdm/interfaces/IApplicationManager;" />
+		<method name="getBrowserManager()Lcm/android/mdm/interfaces/IBrowserManager;" />
+		<method name="getContactsManager()Lcm/android/mdm/interfaces/IContactsManager;" />
+		<method name="getDeviceManager()Lcm/android/mdm/interfaces/IDeviceManager;" />
+		<method name="getNetworkManager()Lcm/android/mdm/interfaces/INetworkManager;" />
+		<method name="getPackageManager()Lcm/android/mdm/interfaces/IPackageManager;" />
+		<method name="getPhoneManager()Lcm/android/mdm/interfaces/IPhoneManager;" />
+		<method name="getRecordManager()Lcm/android/mdm/interfaces/IRecordManager;" />
+		<method name="getRestrictionManager()Lcm/android/mdm/interfaces/IRestrictionManager;" />
+	</class>
+	<class name="cm/android/library/MdmAgent2" since="1" deprecated="1">
+		<extends name="java/lang/Object" />
+		<implements name="cm/android/library/MdmInterface" />
+		<method name="&lt;init>()V" />
+	</class>
+	<class name="cm/android/library/MdmAgent2$PackageInstaller" since="1">
+		<extends name="java/lang/Object" />
+		<implements name="cm/android/library/MdmInterface$PackageInstaller" />
+		<method name="&lt;init>()V" />
+	</class>
+	<class name="cm/android/library/MdmInterface" since="1" deprecated="1">
+		<extends name="java/lang/Object" />
+		<method name="addAppRestriction(ILjava/util/List;)V" />
+		<method name="addBrowserRestriction(ILjava/util/List;)V" />
+		<method name="allowGetUsageStats(Ljava/lang/String;)V" />
+		<method name="deleteAppRestriction(I)V" />
+		<method name="deleteAppRestriction(ILjava/util/List;)V" />
+		<method name="deleteBrowserRestriction(I)V" />
+		<method name="deleteBrowserRestriction(ILjava/util/List;)V" />
+		<method name="enableAccessibilityService(Landroid/content/ComponentName;)V" />
+		<method name="setAppRestriction(I)V" />
+		<method name="setBluetoothDisabled(Z)V" />
+		<method name="setBrowserRestriction(I)V" />
+		<method name="setDeviceOwner(Ljava/lang/String;)Z" />
+		<method name="setGpsDisabled(Z)V" />
+		<method name="setMobileDataDisabled(Z)V" />
+		<method name="setWifiDisabled(Z)V" />
+		<method name="startRecord(Ljava/lang/String;)V" />
+		<method name="startRecordPolicy(Ljava/lang/String;)V" />
+		<method name="stopRecord()V" />
+		<method name="stopRecordPolicy()V" />
+	</class>
+	<class name="cm/android/library/MdmInterface$PackageInstaller" since="1">
+		<extends name="java/lang/Object" />
+		<method name="deletePackage(Ljava/lang/String;Lcm/android/library/MdmInterface$PackageInstaller$PackageDeleteObserver;I)V" />
+		<method name="installPackage(Landroid/net/Uri;Lcm/android/library/MdmInterface$PackageInstaller$PackageInstallObserver;ILjava/lang/String;)V" />
+	</class>
+	<class name="cm/android/library/MdmInterface$PackageInstaller$PackageDeleteObserver" since="1">
+		<extends name="java/lang/Object" />
+		<method name="&lt;init>()V" />
+		<method name="packageDeleted(Ljava/lang/String;I)V" />
+	</class>
+	<class name="cm/android/library/MdmInterface$PackageInstaller$PackageInstallObserver" since="1">
+		<extends name="java/lang/Object" />
+		<method name="&lt;init>()V" />
+		<method name="packageInstalled(Ljava/lang/String;I)V" />
+	</class>
+	<class name="cm/android/mdm/MdmAgent" since="1">
+		<extends name="java/lang/Object" />
+		<method name="&lt;init>()V" />
+		<method name="getApplicationManager()Lcm/android/mdm/interfaces/IApplicationManager;" />
+		<method name="getBrowserManager()Lcm/android/mdm/interfaces/IBrowserManager;" />
+		<method name="getContactsManager()Lcm/android/mdm/interfaces/IContactsManager;" />
+		<method name="getDeviceManager()Lcm/android/mdm/interfaces/IDeviceManager;" />
+		<method name="getNetworkManager()Lcm/android/mdm/interfaces/INetworkManager;" />
+		<method name="getPackageManager()Lcm/android/mdm/interfaces/IPackageManager;" />
+		<method name="getPhoneManager()Lcm/android/mdm/interfaces/IPhoneManager;" />
+		<method name="getRecordManager()Lcm/android/mdm/interfaces/IRecordManager;" />
+		<method name="getRestrictionManager()Lcm/android/mdm/interfaces/IRestrictionManager;" />
+	</class>
+	<class name="cm/android/mdm/Test" since="1">
+		<extends name="java/lang/Object" />
+		<method name="&lt;init>()V" />
+		<method name="test(Landroid/content/Context;)V" />
+	</class>
+	<class name="cm/android/mdm/exception/MdmException" since="1">
+		<extends name="java/lang/RuntimeException" />
+		<method name="&lt;init>()V" />
+		<method name="&lt;init>(Ljava/lang/String;)V" />
+		<method name="&lt;init>(Ljava/lang/String;Ljava/lang/Throwable;)V" />
+		<method name="&lt;init>(Ljava/lang/Throwable;)V" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IApplicationManager" since="1">
+		<extends name="java/lang/Object" />
+		<method name="addDisallowedRunningApp(Ljava/util/List;)V" />
+		<method name="addPersistentApp(Ljava/util/List;)V" />
+		<method name="getDisallowedRunningApp()Ljava/util/List;" />
+		<method name="getPersistentApp()Ljava/util/List;" />
+		<method name="getSupportMethods()Ljava/util/List;" />
+		<method name="killProcess(Ljava/lang/String;)V" />
+		<method name="removeDisallowedRunningApp()V" />
+		<method name="removeDisallowedRunningApp(Ljava/util/List;)V" />
+		<method name="removePersistentApp(Ljava/util/List;)V" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IBrowserManager" since="1">
+		<extends name="java/lang/Object" />
+		<method name="addBrowserRestriction(ILjava/util/List;)V" />
+		<method name="getSupportMethods()Ljava/util/List;" />
+		<method name="removeBrowserRestriction(I)V" />
+		<method name="removeBrowserRestriction(ILjava/util/List;)V" />
+		<method name="setBrowserRestriction(I)V" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IBrowserManager$BrowserColumns" since="1">
+		<extends name="java/lang/Object" />
+		<implements name="android/provider/BaseColumns" />
+		<method name="&lt;init>()V" />
+		<field name="CREATED" />
+		<field name="DATE" />
+		<field name="TITLE" />
+		<field name="URL" />
+		<field name="VISITS" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IContactsManager" since="1">
+		<extends name="java/lang/Object" />
+		<method name="addContactsRestriction(ILjava/util/List;)V" />
+		<method name="getSupportMethods()Ljava/util/List;" />
+		<method name="removeContactsRestriction(I)V" />
+		<method name="removeContactsRestriction(ILjava/util/List;)V" />
+		<method name="setContactsRestriction(I)V" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IDeviceManager" since="1">
+		<extends name="java/lang/Object" />
+		<method name="allowGetUsageStats(Ljava/lang/String;)V" />
+		<method name="captureScreen()Landroid/graphics/Bitmap;" />
+		<method name="enableAccessibilityService(Landroid/content/ComponentName;)V" />
+		<method name="getSupportMethods()Ljava/util/List;" />
+		<method name="isGPSTurnOn()Z" />
+		<method name="isRooted()Z" />
+		<method name="rebootDevice()V" />
+		<method name="setActiveAdmin(Landroid/content/ComponentName;)V" />
+		<method name="setDeviceOwner(Ljava/lang/String;)Z" />
+		<method name="setLockWallPaper(Landroid/graphics/Bitmap;)V" />
+		<method name="setTimeChangeDisabled(Z)V" />
+		<method name="setWallPaper(Landroid/graphics/Bitmap;)V" />
+		<method name="shutdownDevice()V" />
+		<method name="turnOnGPS(Z)V" />
+	</class>
+	<class name="cm/android/mdm/interfaces/INetworkManager" since="1">
+		<extends name="java/lang/Object" />
+		<method name="addApn(Ljava/util/Map;)V" />
+		<method name="addNetworkRestriction(ILjava/util/List;)V" />
+		<method name="getApnInfo(Ljava/lang/String;)Ljava/util/Map;" />
+		<method name="getSupportMethods()Ljava/util/List;" />
+		<method name="queryApn(Ljava/util/Map;)Ljava/util/List;" />
+		<method name="removeApn(Ljava/lang/String;)V" />
+		<method name="removeNetworkRestriction(I)V" />
+		<method name="removeNetworkRestriction(ILjava/util/List;)V" />
+		<method name="setNetworkRestriction(I)V" />
+		<method name="setPreferApn(Ljava/lang/String;)V" />
+		<method name="updateApn(Ljava/util/Map;Ljava/lang/String;)V" />
+	</class>
+	<class name="cm/android/mdm/interfaces/INetworkManager$Carriers" since="1">
+		<extends name="java/lang/Object" />
+		<method name="&lt;init>()V" />
+		<field name="APN" />
+		<field name="AUTH_TYPE" />
+		<field name="BEARER" />
+		<field name="CARRIER_ENABLED" />
+		<field name="CURRENT" />
+		<field name="MCC" />
+		<field name="MMSC" />
+		<field name="MMSPORT" />
+		<field name="MMSPROXY" />
+		<field name="MNC" />
+		<field name="MVNO_MATCH_DATA" />
+		<field name="MVNO_TYPE" />
+		<field name="NAME" />
+		<field name="NUMERIC" />
+		<field name="PASSWORD" />
+		<field name="PORT" />
+		<field name="PROTOCOL" />
+		<field name="PROXY" />
+		<field name="ROAMING_PROTOCOL" />
+		<field name="SERVER" />
+		<field name="SUBSCRIPTION_ID" />
+		<field name="TYPE" />
+		<field name="USER" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IPackageManager" since="1">
+		<extends name="java/lang/Object" />
+		<method name="addAppRestriction(ILjava/util/List;)V" />
+		<method name="addDisallowUninstallApps(Ljava/util/List;)V" />
+		<method name="clearApplicationUserData(Ljava/lang/String;)V" />
+		<method name="deletePackage(Ljava/lang/String;Lcm/android/mdm/interfaces/IPackageManager$PackageDeleteObserver;I)V" />
+		<method name="getDisallowUninstallApps()Ljava/util/List;" />
+		<method name="getSupportMethods()Ljava/util/List;" />
+		<method name="installPackage(Landroid/net/Uri;Lcm/android/mdm/interfaces/IPackageManager$PackageInstallObserver;ILjava/lang/String;)V" />
+		<method name="removeAppRestriction(I)V" />
+		<method name="removeAppRestriction(ILjava/util/List;)V" />
+		<method name="removeDisallowUninstallApps()V" />
+		<method name="removeDisallowUninstallApps(Ljava/util/List;)V" />
+		<method name="setAppRestriction(I)V" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IPackageManager$PackageDeleteObserver" since="1">
+		<extends name="java/lang/Object" />
+		<method name="&lt;init>()V" />
+		<method name="packageDeleted(Ljava/lang/String;I)V" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IPackageManager$PackageInstallObserver" since="1">
+		<extends name="java/lang/Object" />
+		<method name="&lt;init>()V" />
+		<method name="packageInstalled(Ljava/lang/String;I)V" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IPhoneManager" since="1">
+		<extends name="java/lang/Object" />
+		<method name="endCall()V" />
+		<method name="getSupportMethods()Ljava/util/List;" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IRecordManager" since="1">
+		<extends name="java/lang/Object" />
+		<method name="getSupportMethods()Ljava/util/List;" />
+		<method name="startRecord(Ljava/lang/String;)V" />
+		<method name="startRecordPolicy(Ljava/lang/String;)V" />
+		<method name="stopRecord()V" />
+		<method name="stopRecordPolicy()V" />
+	</class>
+	<class name="cm/android/mdm/interfaces/IRestrictionManager" since="1">
+		<extends name="java/lang/Object" />
+		<method name="getSupportMethods()Ljava/util/List;" />
+		<method name="isAdbDisabled()Z" />
+		<method name="isBluetoothDisabled()Z" />
+		<method name="isExternalStorageDisabled()Z" />
+		<method name="isGPSDisabled()Z" />
+		<method name="isMobileDataDisabled()Z" />
+		<method name="isNFCDisabled()Z" />
+		<method name="isSMSDisabled()Z" />
+		<method name="isSafeModeDisabled()Z" />
+		<method name="isUSBDataDisabled()Z" />
+		<method name="isUSBOtgDisabled()Z" />
+		<method name="isVoiceDisabled()Z" />
+		<method name="isWifiApDisabled()Z" />
+		<method name="isWifiDisabled()Z" />
+		<method name="setAdbDisabled(Z)V" />
+		<method name="setBluetoothDisabled(Z)V" />
+		<method name="setExternalStorageDisabled(Z)V" />
+		<method name="setGPSDisabled(Z)V" />
+		<method name="setMobileDataDisabled(Z)V" />
+		<method name="setNFCDisabled(Z)V" />
+		<method name="setSMSDisabled(Z)V" />
+		<method name="setSafeModeDisabled(Z)V" />
+		<method name="setUSBDataDisabled(Z)V" />
+		<method name="setUSBOtgDisabled(Z)V" />
+		<method name="setVoiceDisabled(Z)V" />
+		<method name="setWifiApDisabled(Z)V" />
+		<method name="setWifiDisabled(Z)V" />
+	</class>
+	<class name="cm/android/mdm/util/MethodSignature" since="1">
+		<extends name="java/lang/Object" />
+		<method name="&lt;init>()V" />
+		<method name="generateSignature(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/String;" />
+		<method name="generateSignature(Ljava/lang/reflect/Method;)Ljava/lang/String;" />
+		<method name="getMethodSignatures(Ljava/lang/Class;)Ljava/util/List;" deprecated="2" />
+		<method name="test()V" since="2" />
+	</class>
+	<class name="cm/android/mdminterface/BuildConfig" since="1">
+		<extends name="java/lang/Object" />
+		<method name="&lt;init>()V" />
+		<field name="APPLICATION_ID" />
+		<field name="BUILD_TYPE" />
+		<field name="DEBUG" />
+		<field name="FLAVOR" />
+		<field name="VERSION_CODE" />
+		<field name="VERSION_NAME" />
+	</class>
+</api>
